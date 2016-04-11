@@ -1,0 +1,24 @@
+	<h1 class="page-header text-center">Vesper Cart</h1>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+       				<span class="icon-bar"></span>
+       				<span class="icon-bar"></span>
+        			<span class="icon-bar"></span></button>
+			</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li> <a [routerLink]="['Home']" (click)="fresh=false">Home</a></li>
+				<li> <a (click)="fresh=false">About Us</a></li>
+				<li> <a (click)="fresh=false" [routerLink]="['Registration']">Register</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+        		<li><a [routerLink]="['Login']"><span class="glyphicon glyphicon-log-in" (click)="fresh=false"></span> Login</a></li>
+        	</ul>
+		</div>
+		</div>
+	</nav>
+	<router-outlet></router-outlet>
+
+

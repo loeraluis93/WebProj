@@ -1,0 +1,74 @@
+<div class="container" >
+    <form>
+      <fieldset><h1 class="text-center">Registration Form
+      </h1></fieldset>
+      <div class="form-group">
+
+        <label for="FirstName">First Name</label>
+        <input type="text" class="form-control" required placeholder="Juan" ngControl = "FirstName" #FirstName="ngForm">
+        <div [hidden]="FirstName.valid || FirstName.pristine" class="alert alert-danger">
+        <sup>*</sup>First Name is required!
+        </div>
+
+        <label for="LastName">Last Name</label>
+        <input type="text" class="form-control" required placeholder="Perez" ngControl="LastName" #LastName="ngForm">
+        <div [hidden]="LastName.valid || LastName.pristine" class="alert alert-danger">
+        <sup>*</sup>Last Name is required!
+        </div>
+
+        <label for="email">Email</label>
+        <input type="email" class="form-control" required placeholder="example@gmail.com" ngControl="email" #email="ngForm">
+        <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+        <sup>*</sup>Email is required!
+        </div>
+
+        <label for="username">Username</label>
+        <input type="text" required class="form-control" ngControl="username" #username="ngForm">
+        <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+        <sup>*</sup>Username is required!
+        </div>
+
+         <label for="passwrd">Password</label>
+        <input type="password" required="" class="form-control" ngControl="passwrd" #passwrd="ngForm">
+        <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+        <sup>*</sup>Please provide a valid password
+        </div>
+
+        <label for="state">State</label>
+        <select class="form-control" required ngControl="state" #state="ngForm">
+          <option *ngFor="#st of states" [value]="st">{{st}}</option>
+        </select>
+        <div [hidden]="state.valid || state.pristine" class="alert alert-danger">
+        <sup>*</sup>Please select a state
+        </div>
+
+        <label for="city">ciudad</label>
+        <input type="text" required="" class="form-control" ngControl="city" #city="ngForm" >
+         <div [hidden]="city.valid || city.pristine" class="alert alert-danger">
+        <sup>*</sup>Please provide a city
+        </div>
+
+        <label for="street">Calle</label>
+        <input type="text" required="" class="form-control" ngControl="street" #street="ngForm">
+         <div [hidden]="street.valid || street.pristine" class="alert alert-danger">
+        <sup>*</sup>Please provide a street name
+        </div>
+
+
+        <label for="colonia">Colonia</label>
+        <input type="text" required="" class="form-control" ngControl="colonia" #colonia="ngForm">
+         <div [hidden]="street.valid || street.pristine" class="alert alert-danger">
+        <sup>*</sup>Please provide residencial area
+        </div>
+
+        <label for="numbr">Numero</label>
+        <input type="text" required="" class="form-control" ngControl="numbr" #numbr="ngForm">
+         <div [hidden]="numbr.valid || numbr.pristine" class="alert alert-danger">
+        <sup>*</sup>Please provide a home number
+        </div>
+
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+</div>
